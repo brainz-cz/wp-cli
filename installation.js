@@ -128,14 +128,16 @@ const wordpressInstallation = async () => {
   console.log(output);
 
   var output = await execShellCommand(
-    `wp plugin install admin-columns-for-acf-fields --force --activate`
+    `wp plugin install admin-columns-for-acf-fields --force --activate` 
   );
   console.log(output);
 
-  var output = await execShellCommand(
-    `wp plugin install https://connect.advancedcustomfields.com/v2/plugins/download?p=pro&k=NWVmZDdlZjhlMzdjNmI1NmE5ZDFlODQxMzIzOGViYjQzOTkyMGUwMTQxMzFjMDBlMTUwY2Yy --force --activate`
-  );
+  var output = await execShellCommand('wp plugin install https://connect.advancedcustomfields.com/v2/plugins/download?p=pro&k=NWVmZDdlZjhlMzdjNmI1NmE5ZDFlODQxMzIzOGViYjQzOTkyMGUwMTQxMzFjMDBlMTUwY2Yy --force --activate');
   console.log(output);
+
+var output = await execShellCommand(`wp plugin install https://github.com/wp-graphql/wp-graphql-tax-query/archive/develop.zip --force --activate`);
+  console.log(output);
+
 
   var output = await execShellCommand(`wp plugin install classic-editor --force --activate`);
   console.log(output);
